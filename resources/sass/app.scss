@@ -1,0 +1,27 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//font awesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+.cardheader-custom {
+	background: #2951c1;
+    color: #fff;
+}
+
+.custom-container {
+	width: 75%
+}
+
+
+@media (max-width: 450px){
+	.custom-container {
+		width: 100%;
+	}
+}
