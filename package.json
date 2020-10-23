@@ -23,6 +23,8 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "font-awesome": "^4.7.0"
+        "alertifyjs": "^1.13.1",
+        "font-awesome": "^4.7.0",
+        "slick-carousel": "^1.8.1"
     }
 }

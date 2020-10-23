@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use ServicesTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +15,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+    	$this->call([
+    		'Database\Seeders\UserTableSeeder',
+            'Database\Seeders\ServicesTableSeeder',
+    	]);
     }
 }

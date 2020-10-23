@@ -10,6 +10,25 @@
 //font awesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
+//Slick carousel
+@import "node_modules/slick-carousel/slick/slick";
+@import "node_modules/slick-carousel/slick/slick-theme";
+
+//Alertify
+@import "node_modules/alertifyjs/build/css/alertify.min";
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+button {
+    width: 130px;
+}
+
 .cardheader-custom {
 	background: #2951c1;
     color: #fff;
@@ -19,9 +38,314 @@
 	width: 75%
 }
 
+.custom-slider {
+	display: inline-flex;
+	margin: 10px;
+	width: 100%;
+    border: 1px solid #d6d6d6;
+}
+
+.custom-slider > img {
+    display: block;
+    max-width: 40%;
+    min-height: 150px;
+    margin: 0 5px 0 0;
+}
+
+.custom-slider label {
+	line-height: 14px;
+}
+
+.slider-container {
+	width: 96%;
+    margin: auto;
+}
+
+.maindata-container {
+	width: 96%;
+	margin: auto;
+	border: 1px solid #d6d6d6;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+.maindata-container .row {
+	margin: 15px 0;
+}
+
+.status-label {
+	font-size: 17px;
+    color: #cc6529;
+    font-weight: bold;
+}
+
+.status-label + label {
+	color: #736d6d;
+}
+
+.bar-design {
+	display: inline-flex;
+}
+
+.rnd-textwrap {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.bar-design .rounded-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #ded6d6;
+    border-radius: 44px;
+    padding: 0px 6px;
+    color: #fff;
+}
+
+.bar-design span {
+    border: 1px solid #ded6d6;
+    height: 0.6em;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 116px;
+    border-radius: 3px;
+    background-color: #ded6d6;
+}
+
+.request-clss:after {
+	content: "Requests";
+    display: block;
+    position: absolute;
+	font-weight: bold;
+    color: #736d6d;
+    margin-left: -16px;
+}
+
+.service-clss:after {
+	content: "Service";
+    display: block;
+    position: absolute;
+	font-weight: bold;
+    color: #736d6d;
+    margin-left: -16px;
+}
+
+.payment-clss:after {
+	content: "Payment";
+    display: block;
+    position: absolute;
+	font-weight: bold;
+    color: #736d6d;
+    margin-left: -24px;
+}
+
+.user-section .avatar {
+    max-width: 100px;
+    max-height: 100px;
+    width: 80px;
+    height: 80px;
+    border-radius: 51%;
+}
+
+.user-section .handshake {
+    max-width: 100px;
+    max-height: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.nname {
+	font-size: 18px;
+	margin: 0;
+	color: #018AB8;
+	font-weight: bold;
+}
+
+.deal-tag {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 10px;
+}
+
+.pplace {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.available-txt {
+	color: #736d6d;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.font-icon-common {
+	font-size: 18px;
+	color: #018AB8;
+}
+
+.tablecell-one {
+	padding-right: 3em;
+}
+
+.price-clss {
+    color: #cc6529;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slide-title {
+	font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0; 
+    color: #018AB8;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slide-type {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.slide-text {
+	font-size: 13px;
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.session-txt {
+	font-size: 17px;
+    color: #736d6d;
+    font-weight: bold;
+}
+
+.btn-outline-primary {
+    color: #018AB8;
+    border-color: #018AB8;
+}
+
+.btn-outline-primary:hover {
+	color: #fff;
+	background-color: #018AB8;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #018AB8;
+    border-color: #018AB8;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #065975;
+    border-color: #065975;
+}
+
+.moresec-clss i {
+	font-size: 26px;
+}
+
+.moresec-clss span {
+	display: block;
+	color: #018AB8;
+}
+
+#view_more {
+	color: #3490dc;
+    margin-right: 24px;
+    margin-left: auto;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+.gif-loader img {
+    margin: auto;
+    max-width: 100px;
+}
+
+a.active {
+	text-decoration: underline;
+}
+
+a.red-dot:after {
+    content: "\A";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #b83b3b;
+    display: inline-block;
+    position: absolute;
+    top: 13px;
+}
 
 @media (max-width: 450px){
 	.custom-container {
 		width: 100%;
+	}
+
+	.custom-slider {
+	    max-height: 125px;
+	    overflow-y: hidden;
+	}
+
+	.status-label {
+		font-size: 12px;
+	}
+
+	.status-label + label {
+		font-size: 10px;
+	}
+
+	.user-section .avatar {
+	    max-width: 70px;
+	    max-height: 70px;
+	    width: 50px;
+	    height: 50px;
+	    border-radius: 50%;
+	}
+
+	.user-section .handshake {
+	    max-width: 70px;
+	    max-height: 70px;
+	    width: 35px;
+	    height: 35px;
+	    border-radius: 50%;
+	}
+
+	.font-10px {
+		font-size: 10px;
+	}
+
+	.font-12px {
+		font-size: 12px;
+	}
+
+	.font-15px {
+		font-size: 15px;
+	}
+	.maindata-container td {
+	    font-size: 12px;
+	}
+
+	.tablecell-one {
+		padding-right: 1em;
+	}
+
+	.font-twelvepix:after {
+		font-size: 12px;
+	}
+
+	.price-clss {
+		font-size: 16px;
+	}
+
+	.slider-container {
+	    max-height: 150px;
 	}
 }

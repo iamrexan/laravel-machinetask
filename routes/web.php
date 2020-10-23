@@ -12,11 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'bookings', 'namespace' => 'App\Http\Controllers'], function() {
+	Route::get('/request', 'BookingController@index')->name('request');
+	Route::get('/service', 'BookingController@index')->name('service');
+	Route::get('/payment', 'BookingController@index')->name('payment');
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+	Route::post('get-bookings', 'BookingController@getBookings')->name('get-bookings');
+	Route::post('booking-count', 'BookingController@getBookingCount')->name('get-booking-count');
 
-Route::get('/', function() {
-	return view('main');
+	Route::post('update-status', 'BookingController@statusChange')->name('update-status');
 });
