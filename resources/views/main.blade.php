@@ -95,8 +95,12 @@
 			id = $(this).parent().find('input[name="booking_id"]')[0].value;
 			if (uri == 'bookings/request') {
 				staus = 'ACTIVE'
+				$('.rounded-text').first().addClass('dsuccess').html('<i class="fa fa-check"></i>')
+				.parent('div').next().addClass('dsuccess')
 			} else if (uri == 'bookings/service') {
 				staus = 'PAYMENT'
+				$('.rounded-text').first().parent().next().next().find('p').addClass('dsuccess').html('<i class="fa fa-check"></i>')
+				.parent('div').next().addClass('dsuccess')
 			}
 			updateStatus(id, staus)
 		})
@@ -122,6 +126,7 @@
 				$('.services').show();
 				is_viewmore = false;
 				$('.gif-loader img').hide();
+				appendSuccess()
 			}
 		})
 	}
@@ -151,6 +156,26 @@
 				getBookings()
 			}
 		})
+	}
+
+	function appendSuccess() {
+		if (uri == 'bookings/service') {
+			Object.keys($('#accept_req')).forEach(function(item, index) {
+			    $($('#accept_req')[index]).text('Generate Invoice').addClass('p-1')
+			    $($('#reshedule')[index]).text('Check In')
+			})
+			$('.rounded-text').first().addClass('dsuccess').html('<i class="fa fa-check-circle"></i>')
+			.parent('div').next().addClass('dsuccess')
+		} else if (uri == 'bookings/payment') {
+			$('.rounded-text').first().addClass('dsuccess').html('<i class="fa fa-check-circle"></i>')
+			.parent('div').next().addClass('dsuccess')
+			$('.rounded-text').first().parent().next().next().find('p').addClass('dsuccess').html('<i class="fa fa-check-circle"></i>')
+			.parent('div').next().addClass('dsuccess')
+			Object.keys($('#accept_req')).forEach(function(item, index) {
+			    $($('#accept_req')[index]).text('Resent Invoice')
+			    $($('#reshedule')[index]).text('Start a chat')
+			})
+		}
 	}
 </script>
 </html>

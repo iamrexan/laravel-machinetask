@@ -31,7 +31,7 @@ class ServicesTableSeeder extends Seeder
 	        		'description' => $faker->text,
 	        		'thumnail_url' => $thumnail_arr[random_int(0, 2)],
 	        		'type' => $this->randomType(),
-	        		'price' => $faker->randomFloat(2),
+	        		'price' => $faker->numberBetween(10, 80),
 	        		'currency_id' => 1,
 	        		'price_type' => 1,
 					'created_at' => Carbon::now(),
@@ -52,8 +52,8 @@ class ServicesTableSeeder extends Seeder
 	    	$faker = Factory::create();
 	    	$timing = ['09:00 AM - 02:00 PM', '10:00 AM - 06:00 PM', '08:00 AM - 12:00 PM'];
 	    	$bookings = random_int(1, 3);
-	    	$user_d = random_int(2, 3);
 	    	for ($i=0; $i < $bookings; $i++) { 
+	    		$user_d = random_int(2, 3);
 		        $bookingId = DB::table('bookings')->insertGetId([
 		        	'user_id' => $user_d,
 		        	'service_id' => $serviceId,

@@ -111,6 +111,11 @@ button {
     background-color: #ded6d6;
 }
 
+.bar-design i {
+    color: #fff;
+    background-color: #3da0c1;
+}
+
 .request-clss:after {
 	content: "Requests";
     display: block;
@@ -282,6 +287,12 @@ a.red-dot:after {
     display: inline-block;
     position: absolute;
     top: 13px;
+}
+
+.dsuccess {
+    background-color: #3da0c1 !important;
+    border: 1px solid #3da0c1;
+    color: #fff;
 }
 
 @media (max-width: 450px){

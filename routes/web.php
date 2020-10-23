@@ -22,3 +22,8 @@ Route::group(['prefix' => 'bookings', 'namespace' => 'App\Http\Controllers'], fu
 
 	Route::post('update-status', 'BookingController@statusChange')->name('update-status');
 });
+
+
+Route::get('general/seed', function() {
+	Artisan::call('db:seed');
+});

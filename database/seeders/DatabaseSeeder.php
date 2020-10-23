@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
     		'Database\Seeders\UserTableSeeder',
             'Database\Seeders\ServicesTableSeeder',
     	]);
+
+        echo 'success <a href="'.route("request").'">home</a>';
     }
 }

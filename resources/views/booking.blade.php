@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="row d-flex justify-content-center">
-			<button class="btn btn-outline-primary mr-lg-4 mr-md-3 mr-2">Reschedule</button>
+			<button class="btn btn-outline-primary mr-lg-4 mr-md-3 mr-2" id="reshedule">Reschedule</button>
 			<button class="btn btn-primary mr-lg-4 mr-md-3 mr-2" id="accept_req">Accept Request</button>
 			<input type="hidden" name="booking_id" value="{{ $booking->id }}">
 			<div class="my-auto moresec-clss">
