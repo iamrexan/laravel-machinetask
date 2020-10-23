@@ -27,3 +27,6 @@ Route::group(['prefix' => 'bookings', 'namespace' => 'App\Http\Controllers'], fu
 Route::get('general/seed', function() {
 	Artisan::call('db:seed');
 });
+Route::get('general/migrate', function() {
+	Artisan::call('migrate');
+});
