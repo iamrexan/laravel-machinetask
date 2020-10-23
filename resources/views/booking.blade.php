@@ -2,7 +2,7 @@
 	<div class="maindata-container">
 		<div class="row">
 			<div class="col-5">
-				<span class="status-label">Pending Request</span><br />
+				<span class="status-label" id="requst_label">Pending Request</span><br />
 				<label>{{ Carbon\Carbon::parse($booking->created_at)->format('H:i A, d/m/Y') }}</label>
 			</div>
 			<div class="col-7 bar-design d-flex justify-content-center">

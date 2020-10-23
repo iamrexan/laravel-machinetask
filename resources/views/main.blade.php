@@ -160,16 +160,24 @@
 
 	function appendSuccess() {
 		if (uri == 'bookings/service') {
+			$('#requst_label').text('Upcoming Service')
 			Object.keys($('#accept_req')).forEach(function(item, index) {
 			    $($('#accept_req')[index]).text('Generate Invoice').addClass('p-1')
 			    $($('#reshedule')[index]).text('Check In')
 			})
-			$('.rounded-text').first().addClass('dsuccess').html('<i class="fa fa-check-circle"></i>')
-			.parent('div').next().addClass('dsuccess')
+			$('.rounded-text').first().addClass('dsuccess')
+			.html('<i class="fa fa-check-circle"></i>')
+			.parent('div')
+			.next().addClass('dsuccess')
 		} else if (uri == 'bookings/payment') {
-			$('.rounded-text').first().addClass('dsuccess').html('<i class="fa fa-check-circle"></i>')
+			$('#requst_label').text('Pending payment')
+			$('.rounded-text').first().addClass('dsuccess')
+			.html('<i class="fa fa-check-circle"></i>')
 			.parent('div').next().addClass('dsuccess')
-			$('.rounded-text').first().parent().next().next().find('p').addClass('dsuccess').html('<i class="fa fa-check-circle"></i>')
+			
+			$('.rounded-text').first().parent().next()
+			.next().find('p').addClass('dsuccess')
+			.html('<i class="fa fa-check-circle"></i>')
 			.parent('div').next().addClass('dsuccess')
 			Object.keys($('#accept_req')).forEach(function(item, index) {
 			    $($('#accept_req')[index]).text('Resent Invoice')
