@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function() {
+	return redirect()->route('request');
+});
+
 Route::group(['prefix' => 'bookings', 'namespace' => 'App\Http\Controllers'], function() {
 	Route::get('/request', 'BookingController@index')->name('request');
 	Route::get('/service', 'BookingController@index')->name('service');
